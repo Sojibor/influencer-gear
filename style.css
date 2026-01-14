@@ -1,0 +1,131 @@
+:root{
+    --primary-color: #E22E6D;
+}
+/*Opensans Font by Google Font*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+body{
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+*{
+    margin: 0 auto;
+}
+/* Share Style*/
+.flex{
+    display: flex;
+    align-items: center;
+}
+.navbar, .hero{
+    max-width: 1440px;
+}
+.btn{
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+    justify-content: center;
+    display: flex;
+    margin-right: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+li a{
+      color: black;
+}
+.grid{
+    display: grid;
+
+}
+header{
+    padding: 20px 0;
+    background-color: rgb(175, 172, 172);
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+}
+/* Hero Style*/
+.hero{
+    /* grid-template-columns: repeat(2, 1fr); */
+    align-items: center; 
+    margin: 0 auto;
+    height: 90vh;
+    width: 80%;
+}
+.htex h2{
+    font-size: 40px;
+}
+.himg{
+    background-image:url(images/Circle-design.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.custom-logo{
+        padding: 20px 5px;
+        margin: 0 auto;
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        border-top: 1px solid rgba(110, 110, 110, 0.123);
+        border-bottom: 1px solid rgba(110, 110, 110, 0.123);
+        width: 80%;
+}
+.logos img:hover{
+    scale: calc(1.2);
+    transition: 1000ms;
+}
+.collection{
+     margin-top: 50px;
+     width: 80%;
+     text-align: center;
+}
+.card{
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card-items{
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px #E3E5E6;
+    width: 300px;
+    text-align: left;
+}
+.card-items img{
+    width: 100%;
+}
+@media screen and (max-width: 576px) {
+   .hero {
+        flex-direction: column-reverse;
+        text-align:center;
+    }
+   .htex h2{
+    font-size: 30px;
+   }
+   .himg img{
+        width: 100%;
+   }
+
+    .custom-logo{
+        padding: 20px 5px;
+        margin: 2px;
+        border-radius: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .collection, .custom-logo, .hero {
+        width: 100%;
+    }
+}
