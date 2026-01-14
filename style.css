@@ -54,11 +54,10 @@ header{
     z-index: 10;
 }
 /* Hero Style*/
-.hero{
-    /* grid-template-columns: repeat(2, 1fr); */
+.hero, .featured{
     align-items: center; 
     margin: 0 auto;
-    height: 90vh;
+    height: 75vh;
     width: 80%;
 }
 .htex h2{
@@ -90,32 +89,87 @@ header{
      text-align: center;
 }
 .card{
-    gap: 20px;
+    /* gap: 20px;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
+    grid-template-columns: repeat(4,1fr);
+    gap: 60px;
+    width: 80%;
+    align-items: center;
 }
 .card-items{
     padding: 10px;
     background-color: white;
     border-radius: 10px;
-    box-shadow: 10px 10px 10px #E3E5E6;
-    width: 300px;
+    box-shadow: 4px 4px 12px 4px #E3E5E6;
+    width: 250px;
     text-align: left;
 }
 .card-items img{
     width: 100%;
 }
-@media screen and (max-width: 576px) {
-   .hero {
-        flex-direction: column-reverse;
-        text-align:center;
-    }
-   .htex h2{
+.card-items h3{
+    font-size: 25px;
+    margin: 5px 0;
+}
+.card-items h4{
+    font-size: 25px;
+    font-weight: 300;
+    margin: 5px 0;
+}
+.card-items p{
+    font-size: 16;
+    margin: 5px 0;
+}
+.satr i{
+    color: orange;
+    margin-top: 8px;;
+}
+.moreproducts{
+    text-align: right;
+}
+.moreproducts a{
+     color: #E22E6D;
+     font-weight: 600;
+}
+#footer{
+    background-color: #0A0826;
+    text-align: center;
+    color: white;
+padding: 100px 0px;
+}
+.footer h2{
+    font-size: 40px;
+}
+.footer p{
+    font-size: 20px;
+    margin: 10px;
+}
+.footer i{
     font-size: 30px;
-   }
-   .himg img{
-        width: 100%;
-   }
+    margin: 20px;
+}
+@media screen and (max-width:1440px) {
+    .hero{
+        height: 50vh;
+    }  
+    .card{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+        .collection, .custom-logo, .hero, .card {
+        width: 80%;
+}
+
+@media screen and (max-width:991px) {
+    .hero{
+        height: 50vh;
+    }  
+    .card{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
 
     .custom-logo{
         padding: 20px 5px;
@@ -125,7 +179,34 @@ header{
         flex-wrap: wrap;
         gap: 10px;
     }
-    .collection, .custom-logo, .hero {
+        .collection, .custom-logo, .hero, .card {
+        width: 100%;
+}
+}
+@media screen and (max-width: 576px) {
+   .hero, .featured{
+        flex-direction: column-reverse;
+        text-align:center;
+        height: 50vh;
+    }
+   .htex h2{
+    font-size: 30px;
+   }
+   .himg img{
+        width: 100%;
+   }
+    .custom-logo{
+        padding: 20px 5px;
+        margin: 2px;
+        border-radius: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .card{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .collection, .custom-logo, .hero, .card {
         width: 100%;
     }
 }
